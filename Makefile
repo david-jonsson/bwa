@@ -1,9 +1,11 @@
-CC=			gcc
+# CC=			gcc
+CC= 		clang
 #CC=			clang --analyze
-CFLAGS=		-g -Wall -Wno-unused-function -O2
+CFLAGS=		-g -Wall -Wno-unused-function -O2 -stdlib=libc++
 WRAP_MALLOC=-DUSE_MALLOC_WRAPPERS
 AR=			ar
-DFLAGS=		-DHAVE_PTHREAD $(WRAP_MALLOC)
+#DFLAGS=		-DHAVE_PTHREAD $(WRAP_MALLOC)
+DFLAGS=		$(WRAP_MALLOC)
 LOBJS=		utils.o kthread.o kstring.o ksw.o bwt.o bntseq.o bwa.o bwamem.o bwamem_pair.o bwamem_extra.o malloc_wrap.o \
 			QSufSort.o bwt_gen.o rope.o rle.o is.o bwtindex.o
 AOBJS=		bwashm.o bwase.o bwaseqio.o bwtgap.o bwtaln.o bamlite.o \
@@ -12,7 +14,7 @@ AOBJS=		bwashm.o bwase.o bwaseqio.o bwtgap.o bwtaln.o bamlite.o \
 			bwtsw2_chain.o fastmap.o bwtsw2_pair.o
 PROG=		bwa
 INCLUDES=	
-LIBS=		-lm -lz -lpthread
+LIBS=		-lm -lz -lpthread -lbwa_cal_sa_reg_gap -lstdc++ 
 SUBDIRS=	.
 
 ifeq ($(shell uname -s),Linux)
