@@ -18,7 +18,8 @@
 #endif
 
 #ifdef USE_MALLOC_WRAPPERS
-#  include "malloc_wrap.h"
+#include "malloc_wrap.h"
+#include "match_gap_coro.h"
 #endif
 
 gap_opt_t *gap_init_opt()

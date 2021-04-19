@@ -7,5 +7,6 @@ Makefile.bak
 bwamem-lite
 
 *.fast*
+*.sai
 perf*
 vgcore*

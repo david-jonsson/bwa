@@ -176,6 +176,8 @@ void bwt_occ4(const bwt_t *bwt, bwtint_t k, bwtint_t cnt[4])
 	}
 	k -= (k >= bwt->primary); // because $ is not in bwt
 	p = bwt_occ_intv(bwt, k);
+    // printf("occ_0: %p %p %lu\n", p, bwt, k);
+
 	memcpy(cnt, p, 4 * sizeof(bwtint_t));
 	p += sizeof(bwtint_t); // sizeof(bwtint_t) = 4*(sizeof(bwtint_t)/sizeof(uint32_t))
 	end = p + ((k>>4) - ((k&~OCC_INTV_MASK)>>4)); // this is the end point of the following loop
@@ -200,6 +202,8 @@ void bwt_2occ4(const bwt_t *bwt, bwtint_t k, bwtint_t l, bwtint_t cntk[4], bwtin
 		k -= (k >= bwt->primary); // because $ is not in bwt
 		l -= (l >= bwt->primary);
 		p = bwt_occ_intv(bwt, k);
+    	// printf("occ_4: %p %p %lu\n", p, bwt, k);
+
 		memcpy(cntk, p, 4 * sizeof(bwtint_t));
 		p += sizeof(bwtint_t); // sizeof(bwtint_t) = 4*(sizeof(bwtint_t)/sizeof(uint32_t))
 		// prepare cntk[]
