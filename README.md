@@ -1,3 +1,13 @@
+# Build instructions
+* Build [https://github.com/lh3/bwa](https://github.com/lh3/bwa), copy libbwa to Debug/ in [https://github.com/david-jonsson/bwa_cal_sa_reg_gap](https://github.com/david-jonsson/bwa_cal_sa_reg_gap)
+* Build bwa_cal_sa_reg_gap, copy libbwa_cal_sa_reg_gap to root in [https://github.com/david-jonsson/bwa](https://github.com/david-jonsson/bwa)
+* Build [https://github.com/david-jonsson/bwa](https://github.com/david-jonsson/bwa)
+
+# Requirements
+* Clang10
+
+Original readme below
+
 [![Build Status](https://travis-ci.org/lh3/bwa.svg?branch=dev)](https://travis-ci.org/lh3/bwa)
 [![SourceForge Downloads](https://img.shields.io/sourceforge/dt/bio-bwa.svg?label=SF%20downloads)](https://sourceforge.net/projects/bio-bwa/files/?source=navbar)
 [![GitHub Downloads](https://img.shields.io/github/downloads/lh3/bwa/total.svg?style=flat&label=GitHub%20downloads)](https://github.com/lh3/bwa/releases)
