@@ -5,6 +5,7 @@
 
 # Requirements
 * Clang10
+* [cppcoro](https://github.com/lewissbaker/cppcoro)
 
 Original readme below
 
